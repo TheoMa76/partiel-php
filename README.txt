@@ -1,18 +1,20 @@
+!!!!! N'OUBLIEZ PAS DE CHANGER LES INFO DANS VOTRE CONFIG.JSON !!!!!
+
 Ce projet a besoin de composer
 
-Ouvrir terminal, aller dans le dossier du projet puis taper : composer init
-appuyer entrée
-appuyer entrée
-écrire n puis appuyer sur entrée
-appuyer entrée
-appuyer entrée
-appuyer entrée
-écrire no puis appuyer sur entrée
-écrire no puis appuyer sur entrée
-appuyer entrée
-appuyer entrée
-ajouter a .gitignore
+Si composer est déjà installé
+il suffit :
+- d'ouvrir un terminal
+- d'aller dans le dossier du projet et d'écrire composer install
 
-aller dans composer.json
-changer cette ligne :             "Root\\PartielPhp\\": "src/"
-en celle ci :                     "Theo\\":"src/"
+si vous n'avez pas composer, il faut l'installer:
+
+tapez ceci dans votre terminal et tout s'installera.
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+Maintenant aller dans le projet et faites composer install.
+Normalement tout devrait fonctionner.
