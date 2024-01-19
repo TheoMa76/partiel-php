@@ -113,7 +113,6 @@ function create(Object $object){
     try {
         $statement = $connection->prepare($query);
         $statement->execute();
-        echo "Succès !";
     } catch(PDOException $e) {
         echo $query . "<br>" . $e->getMessage();
     }
@@ -165,9 +164,12 @@ function delete(Object $object, int $id){
     }
 }
 
-function read(string $table){
+function read(string $table,bool $order = false,string $by = null){
 
     $query = queryBuilder('r', $table);
+    if($order && isset($by)){
+        $query .= "ORDER BY reussite ". $by .";";
+    }
     $connection = new PDOManagerClass();
     try {
         $statement = $connection->prepare($query);

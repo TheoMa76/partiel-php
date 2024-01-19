@@ -1,0 +1,9 @@
+{
+    "name": "root/partiel-php",
+    "autoload": {
+        "psr-4": {
+            "Theo\\": "src/"
+        }
+    },
+    "require": {}
+}
